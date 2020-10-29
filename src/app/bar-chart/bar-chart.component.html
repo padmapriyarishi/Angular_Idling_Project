@@ -1,0 +1,43 @@
+<div class="">
+    <div class="col-md-12">
+        <button class="btn search-btn bold-text">IDLING LEVEL</button>
+        <span class="float-right">
+            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+        </span>
+    </div><br />
+    <div class="col-md-12">
+        <select id="store"  [(ngModel)]="selectedAssets" class="assets-dropdown"
+            (change)="onChangeAssets()">
+            <option>(9650) ALL ASSETS</option>
+            <option>1950</option>
+            <option>500</option>
+        </select>
+    </div>
+</div>
+
+<div class="col-md-12 button-wrapper">
+    <div class="btn-group btn-group-toggle">
+        <label class="btn btn-secondary" [class.active]="years==='day'">
+            <input type="radio" value="current" [(ngModel)]="years" (change)="onYearChange('current')"> DAY
+        </label>
+        <label class="btn btn-secondary" [class.active]="years==='week'">
+            <input type="radio" value="future" (change)="onYearChange('future')" [(ngModel)]="years">WEEK
+        </label>
+        <label class="btn btn-secondary" [class.active]="years==='month'">
+            <input type="radio" value="future+" (change)="onYearChange('future+')" [(ngModel)]="years"> MONTH
+        </label>
+    </div>
+
+    <div class="row no-margin">
+        <div class="row-container grid-wrapper">
+            <div class="col-md-12 table-container">
+                <div style="display: block; width: 300px; height: 400px;">
+                    <canvas baseChart [chartType]="chartType" [datasets]="chartDatasets" [labels]="chartLabels"
+                        [colors]="chartColors" [options]="chartOptions"
+                        [plugins]="barChartPlugins" [legend]="true"
+                        (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>

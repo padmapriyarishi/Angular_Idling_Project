@@ -1,0 +1,59 @@
+@import "variable.less";
+select{
+    height: 40px;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: @trimbleWhite;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 0px;
+    font-size: @font14;
+    color: @trimbleBlack;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    background-image: url("../assets/images/caret_down.svg");
+    background-repeat: no-repeat;
+    background-position: 95%;
+    display: block;
+    width: 30%;
+    font-weight: bold;
+    font-family: Roboto;
+    &::-ms-expand {
+        display: none;
+    }
+}
+btn-primary {
+    background-color: @trimbleBlue;
+    color: @trimbleBlue;
+    height: 50px;
+    font-size: @font15;
+    font-weight: 800;
+    border-radius: 0px;
+    border: none;
+    &:not(:disabled):not(.disabled):active {
+        background-color: @trimbleYellow;
+        border: 2px solid @trimbleBlue;
+        color: @trimbleBlue;
+    }
+    &:hover {
+        background-color: @trimbleBlue;
+        border: none;
+        color: @trimbleWhite;
+    }
+}
+.search-btn {
+    border-radius: 5px;
+    border: 2px solid @trimbleBlue;
+    font-size: @font14;
+    font-weight: 800;
+    width: 20%;
+    color: @trimbleWhite;
+    height: 40px;
+    background-color: @trimbleBlue;
+}
+.float-right {
+    float: right !important;
+}
