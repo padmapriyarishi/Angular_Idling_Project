@@ -21,7 +21,7 @@ export class BarChartComponent implements OnInit {
   public years : string = "day";
 
   public chartDatasets: Array<any> = [
-    { data: [1950, 1130, 1576, 1911,500,0], label:"IDLING" }
+    { data: [1950, 1130, 1576, 1911,500,0], label:"IDLING LEVEL" }
   ];
   public barChartPlugins = [pluginDataLabels];
 
@@ -75,7 +75,7 @@ export class BarChartComponent implements OnInit {
   public chartClicked(e: any): void {}
   public chartHovered(e: any): void {}
 
-  onYearChange(year) {
+  onChange(year) {
 
   }
 
